@@ -1,0 +1,14 @@
+#hide {
+    display: none;  /*скрытие div-a*/
+}
+img {
+    display: none;  /*скрытие изображения*/
+}
+* {  /*смена формата текста*/
+    color: black;
+    text-align: left;
+    font-family: serif;
+}
+p {
+    padding-top: 15px;
+}
