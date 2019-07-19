@@ -37,22 +37,29 @@ function setCurrent (){
 document.querySelector('#size-range').oninput = setCurrent;
 
 // 5. Создайте три input type=range. Значения от нуля до 255. Создайте блок, цвет rgb которого определятеся значением на ползунках. При изменении положения ползунков, изменяется цвет блока. Возле каждого ползунка выводить текущее значение цвета.
+function make16 (num){
+    num = parseInt(num);    // к числу
+    num = num.toString(16); // к 16-й записи
+    if (num.length != 2){   // проверка корректности записи числа
+        num = '0' + num;
+    }
+    return num;
+}
 function setRGB(){
     // получение значений
     let r = document.querySelector('#r-red').value;
     let g = document.querySelector('#r-green').value;
     let b = document.querySelector('#r-blue').value;
-    // вывод значений
+    // вывод значений из range
     document.querySelector('#current-red').innerText = r;
     document.querySelector('#current-green').innerText = g;
     document.querySelector('#current-blue').innerText = b;
-    r = parseInt(r);
-    g = parseInt(g);
-    b = parseInt(b);
-    let div_color = '#'+r.toString(16)+g.toString(16)+b.toString(16);
-    //console.log(r+' '+g+' '+b);
-    console.log('#'+r.toString(16)+g.toString(16)+b.toString(16));
-    //console.log('#'+r.toString(16)+g.toString(16)+b.toString(16));
+    // преобразование в 16-ю систему с учетом записи в двух символах
+    r = make16(r);
+    g = make16(g);
+    b = make16(b);
+    console.log('#'+r+g+b);
+    div_color = '#'+r+g+b;
     document.querySelector('.rgb').style.backgroundColor = div_color;
 }
 document.querySelector('#r-red').oninput = setRGB;
