@@ -9,19 +9,29 @@
 </head>
 <body>
     <p>
-        Цвет фона страницы: <input type="color" class="ch-color">
+        Цвет фона страницы: <input type="color" class="ch-color"><br>
         <button id="btn-color">Сменить цвет фона</button>
     </p>
 
     <p>
-        Цвет фона страницы: <input type="color" class="fon-color"> <br>
+        Цвет фона страницы: <input type="color" class="fon-color"><br>
         Цвет текста на странице: <input type="color" class="text-color"><br>
         <button id="btn-ft-color">Сменить цвет текста и фона</button><br>
         <button id="btn-reset">Сбросить параметры</button>
     </p>
     <p>
         Размер текста<input type="range" name="" id="size-range" min='14' max='48' value='16'>
+        <span id="current-range">nn</span><br>
         <button id="btn-size">Изменить размер текста</button>
+    </p>
+    <p>
+        Red: <span id="current-red">128</span><br>
+        <input type="range" name="" id="r-red" min="0" max="255"><br>
+        Green: <span id="current-green">128</span><br>
+        <input type="range" name="" id="r-green" min="0" max="255"><br>
+        Blue: <span id="current-blue">128</span><br>
+        <input type="range" name="" id="r-blue" min="0" max="255"><br>
+        <div class="rgb"></div>
     </p>
     <script src="script.js"></script>
 </body>
