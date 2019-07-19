@@ -145,7 +145,13 @@
     document.querySelector('.класс[атрибут="значение"]').checked; // true/false о пометке
     document.querySelector('.класс[атрибут="значение"]').value; // значение атрибута value у опции - задается заранее
 
+//todo -----lesson 7-----
 
+
+//todo -----lesson 8-----
+//todo -----lesson 9-----
+//todo -----lesson 10----
+//todo -----lesson 11----
 
 
 
