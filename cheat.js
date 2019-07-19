@@ -57,15 +57,18 @@
     //? код получения
     let a = document.querySelector('#pole');
     let chislo = a.value;
+
 // перевод строки в число
     parseInt(a)      //* строку в число
-// проверка на число  NaN
+
+// проверка на число  isNaN
     isNaN(a);       //* да - не число, нет - число
 
 // Генерация чисел
     Math.random();  //* генерация от 0 до 1
     //* округление
             Math.round()
+
 // перезагрузка страницы 
     location.reload();
     
@@ -107,3 +110,42 @@
 
 // если атрибут можно получить, то его можно заменить
     document.querySelector('img').src = 'qwe.jpg';
+
+//todo -----lesson 6-----
+// получение данных через input
+
+//анонимная функция - функция без имени, работает только в одном месте
+    document.querySelector('# aqwe').onclick = function (){
+        //команды
+    }
+    //также есть стрелочные функции
+
+// типы инпутов
+    input type='' // http://htmlbook.ru/html/input/type
+    
+    //* checkbox
+    <input type="checkbox" class="ch1" id="ch1"> </input>
+    // id
+        <label for="ch1">123</label>
+    // для работы с опциями выбирать можно по id и по class
+    document.querySelector('#ch1').checked //вернет true/false
+
+// radio
+    <input type="radio" class="rad" id='rad1' name='имя_списка'></input>
+        <label for="rad1"> ONE </label>
+    <input type="radio" class="rad" id='rad2' name='имя_списка'></input>
+        <label for="rad1"> TWO</label>
+    
+    //! имя списка связывает инпут-радио блоки в один, позволяя выбрать только один из списка 
+    //! крайне желательно отмечать одну из опций с помощью атрибута checked
+        checked='checked';
+    //* проверку можно проводить по id нужного элемента и .checked
+
+// поиск элемента по классу с установленным атрибутом
+    document.querySelector('.класс[атрибут="значение"]').checked; // true/false о пометке
+    document.querySelector('.класс[атрибут="значение"]').value; // значение атрибута value у опции - задается заранее
+
+
+
+
+
