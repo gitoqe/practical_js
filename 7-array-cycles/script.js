@@ -1,22 +1,48 @@
 // 1. Выведите на экран числа от 0 до 100.
 let p_sto = document.querySelector('#sto');
 for (let i = 0; i <= 100; i++) {
-    console.log(i); //вывод в консоль
+    //console.log(i); //вывод в консоль
     p_sto.innerHTML += i + ' ';
 }
+
 // 2. Вывести четные числа от 0 до 101.
 let p_chet = document.querySelector('#chet');
 for (let i = 0; i < 101; i++) {
-    if (i % 2 == 0){    //очень рад, что в js работает остаток от деления
-        console.log(i);
+    if (i % 2 == 0){    //очень рад, что в js работает остаток от деления и инкремент
+        //console.log(i);
         p_chet.innerHTML += i + ' ';
     }
 }
+
 // 3. Вывести числа в следущей последовательности: 200 199 198 ... 0.
+let p_reverse = document.querySelector('#reverse');
+for (let i = 200; i >= 0; i--) {
+    //console.log(i);
+    p_reverse.innerHTML += i + ' ';
+}
 
 // 4. Найти сумму чисел от 0 до 100 (включительно). (0+1+2+3+4+5).
+let p_sum_sto = document.querySelector('#sum-sto');
+let sum_sto = 0;
+for (let i = 0; i <= 100; i++) {
+    sum_sto += i;
+}
+console.log('Сумма чисел от 0 до 100 равна ' + sum_sto);
+p_sum_sto.innerHTML = 'Сумма чисел от 0 до 100 равна ' + sum_sto;
 
 // 5. Задайте два input. В первый вводится число, во второе его степень. С помощью цикла возведите число в степень. Напечатайте результат.
+function pow(){ // x^y
+    let x = document.querySelector('#base').value;
+    let y = document.querySelector('#power').value;
+    let otvet = 1;
+    for (let i = 1; i <= y; i++) {
+        otvet *= x;
+    }
+    //console.log(otvet);
+    document.querySelector('#pow').innerHTML = otvet;
+}
+document.querySelector('#base').oninput = pow;;
+document.querySelector('#power').oninput = pow;;
 
 /* 6. С помощью цикла напечатайте таблицу умножения на 7 от 1 до 9.
 Т.е.: 
@@ -24,13 +50,30 @@ for (let i = 0; i < 101; i++) {
 2*7=14 
 3*7=21...
 */
+let seven = document.querySelector('#seven');
+for (let i = 1; i <= 9; i++) {
+    seven.innerHTML += i + '*' + '7' + '=' + i*7 +'<br>';
+}
 
-/* 7. С помощью цикла вывести произведение чисел от 1 до 50.
+// 7. С помощью цикла вывести произведение чисел от 1 до 50.
+let proizved = document.querySelector('#proizved');
+let otvet_proizv = 1;
+for (let i = 1; i <= 50; i++) {
+    otvet_proizv *= i;
+}
+proizved.innerHTML = 'Произведение чисел от 1 до 50 равно ' + otvet_proizv;
 
-8. Выведите с помощью цикла коды спецсимволов от 1000 до 2000. Напомню, что спецсимвол получается комбинацией &#число; Например &#1222;
 
-9. Получите все параграфы внутри div.main страницы. Используя цикл пронумеруйте все параграфы. Номер добавьте внутри тега параграфа перед текстом.
+// 8. Выведите с помощью цикла коды спецсимволов от 1000 до 2000. Напомню, что спецсимвол получается комбинацией &#число; Например &#1222;
+let spec_code = document.querySelector('#spec-code');
+for (let i = 1000; i <= 2000; i++) {
+    spec_code.innerHTML += '&#' + i + '; ';
+}
 
+
+// 9. Получите все параграфы внутри div.main страницы. Используя цикл пронумеруйте все параграфы. Номер добавьте внутри тега параграфа перед текстом.
+
+/*
 10. Создайте два поля. В одно пользователь вводит день рождения, во второй - месяц (в виде числа). Выведите знак зодиака под каким родился пользователь. Данные о знаке зодиака храните в массиве.
 
 11. С помощью JS найдите все span на странице и сделайте им цвет фона - желтый.
