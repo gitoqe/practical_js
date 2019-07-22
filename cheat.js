@@ -147,7 +147,7 @@
     document.querySelector('.класс[атрибут="значение"]').checked; // true/false о пометке
     document.querySelector('.класс[атрибут="значение"]').value; // значение атрибута value у опции - задается заранее
 
-//todo -----lesson 7-----
+//todo -----lesson 7----- CYCLE, ARRAY
 // выбор по классу
 .querySelectorAll('')
     //? собирает элементы такого класса/id и образует из них массив
@@ -170,8 +170,8 @@
 // поиск внутри элемента
     document.querySelectorAll('#idshnik option')
 
+//todo -----lesson 8-----   EVENTS
 
-//todo -----lesson 8-----
 //todo -----lesson 9-----
 //todo -----lesson 10----
 //todo -----lesson 11----
