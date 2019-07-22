@@ -91,7 +91,6 @@ function zodiak(){
     let M = document.querySelector('#month').value;
     let znak = document.querySelector('#znak');
     for (let i = 0; i < calend.length; i++) {
-        console.log(calend[i][0]);
         if (((M == calend[i][1]) && (D >= calend[i][2])) || 
             ((M == calend[i][3]) && (D <= calend[i][4]))){
             znak.innerHTML = calend[i][0];
@@ -167,42 +166,58 @@ function setArr(){
 document.querySelector('#btn-one').onclick = setArr;
 
 // 17. Создайте input куда пользователь может ввести количество элементов массива. После нажатия кнопки создается массив заданной длинны заполненный случайными числами от 0 до 100.
-
-/*
-18. Создайте массив заполненный числами и строками. Используя цикл создайте другой массив куда поместите только числа из первого массива.
-
-19. Создайте массив. Выведите максимальное значение из этого массива.
-
-20! Сложное! Создайте массив и заполните его значениеми. Выведите статистику - сколько раз в массиве повторяется то или инное значение.
-
-Внимание! Подсказка!
-
-Решить задачу можно просто если заранее выполнить анализ ситуации. Нам нужна статистика, сколько встречается какое число. Т.е. нам нужно что-то вида: число 5 встречается 2 раза, число 33 всречается 3 раза. Согласитесь, это очень похоже на ассоциативный массив:
-
-
-let b = { 5: 2, 33 : 3}	
-Итак, мы должны создать ассоциативный массив куда будем складывать результаты анализа сайта. Мы создадим его для того, чтобы класть наши результаты. Теперь начнем перебирать исходный массив:
-
-
-let a = [22, 3, 1, 22, 3, 5, 67, 32, 1, 3];
-let b = {} // наш массив для результатов
-for (let i = 0; i < b.length; i++) {
-
+let array_sto = [];
+function setStoArr(){
+    let elem_num = document.querySelector('#elem-sto').value;
+    for (let i = 0; i < elem_num; i++) {
+        array_sto[i] = Math.round(Math.random()*100);
+    }
+    document.querySelector('#array-sto').innerHTML = array_sto;
 }
-Теперь мы должны выполнить следующие действия - берем i-й элемент массива a и проверяем, есть ли он в массиве b. Если есть, увеличиваем на единицу, если нет - создаем и присваиваем значениен 1. Теперь по проходу массива а в b будет лежать статистика. Т.е. всего нам понадобился один цикл
+document.querySelector('#btn-sto').onclick = setStoArr;
 
+// 18. Создайте массив заполненный числами и строками. Используя цикл создайте другой массив куда поместите только числа из первого массива.
+let str_and_num = [2, 4, 'word', 8, 15, 'slovo'];
+let only_num = [];
+for (let i = 0; i < str_and_num.length; i++) {
+    if (!(isNaN(str_and_num[i]))){
+        only_num.push(str_and_num[i]);
+    }
+}
+document.querySelector('#str-and-num').innerHTML = str_and_num;
+document.querySelector('#only-num').innerHTML = only_num;
 
-let a = [22, 3, 1, 22, 3, 5, 67, 32, 1, 3];
-let b = {} // наш массив для результатов
-for (let i = 0; i < b.length; i++) {
-if (b[a[i]] == undefined) {
-	b[a[i]] = 1;
+// 19. Создайте массив. Выведите максимальное значение из этого массива.
+let array_max = [2,4,8,123,16,32,64];
+let max = array_max[0];
+for (let i = 0; i < array_max.length; i++) {
+    if (array_max[i] >= max) {
+        max = array_max[i];
+    }
 }
-else {
-	b[a[i]]++;
+document.querySelector('#array-max').innerHTML = array_max;
+document.querySelector('#max').innerHTML = max;
+
+// 20! Сложное! Создайте массив и заполните его значениеми. Выведите статистику - сколько раз в массиве повторяется то или инное значение.
+let array_base = [];
+let max_N = 5;
+for (let i = 0; i < 10; i++) {
+    array_base[i] = Math.round(Math.random()*max_N);
 }
+document.querySelector('#array-base').innerHTML = array_base;
+let array_stat = {};
+for (let i = 0; i < array_base.length; i++) {
+    if (array_stat[array_base[i]] == undefined){
+        array_stat[array_base[i]] = 1;
+    }else{
+        array_stat[array_base[i]] ++;
+    }
 }
-*/
+for (let i = 0; i <= max_N; i++) {
+    if (array_stat[i] != undefined){
+        document.querySelector('#array-stat').innerHTML += i + ' : ' + array_stat[i] + '<br>';
+    }
+}
 
 // нумерация заданий
 let task_number = document.querySelectorAll('h3');
