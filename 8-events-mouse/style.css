@@ -1,6 +1,6 @@
 .block{
-    width: 220px;
-    height: 220px;
-    background: gray;
+    width: 256px;
+    height: 256px;
+    background: lightgray;
     margin: 15px;
 }
