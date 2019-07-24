@@ -181,6 +181,7 @@
 
 }
 //todo -----lesson 8-----   EVENTS
+{
 //! https://developer.mozilla.org/ru/docs/Web/API/MouseEvent
 // перед событиями в свойствах элемента ставится приставка _on_
 // события мыши
@@ -209,9 +210,12 @@
     document.querySelector('.класс или id или тег').ивент = function(){
         console.log('click');
     }
-// выбор через querySelector применяется только к первому встреченному элементу
-
-// событие нельзя присвоить коллекции элементов
+}
+//todo -----lesson 8 bonus
+{
+//* querySelectorAll дает коллекцию элементов
+    // выбор через querySelector применяется только к первому встреченному элементу
+    // событие нельзя присвоить коллекции элементов
 
 
 //* обработка через forEach()
@@ -222,6 +226,34 @@ blocks.forEach(function(element){   // автоматически проходи
     }
 })
 
+//* переменная this
+    // меняется в зависимости от параметров применения
+    //при работе с элементом внутри функции this примет значение самого элемента
+    let alpha = 5;
+    alpha.vivod;
+    function vivod(){
+        console.log(this);
+        this.style.background = 'red';
+    }
+//* функция .getAttribute('атрибут')
+    // позволяет считать атрибут
+
+}
+//* изменение курсора при наведении в CSS
+    .tab{
+        cursor: pointer;
+    }
+//* составной запрос с использованием CSS-синтаксиса
+    // .класс[атрибут=значение]
+    .tab[color=red;];
+    //совмещение переменных и текста в запросе
+    //! кавычки!
+        document.querySelector('.tab-body[data="'+data+'"]').style.display = 'block';
+        //! обратный апостроф `     для ES6?
+        document.querySelector(`.tab-body[data="${+data+}"]`).style.display = 'block';
+
+// атрибут data-...
+    //* используется для выделения элемента среди себе подобных
 //todo -----lesson 9-----
 //todo -----lesson 10----
 //todo -----lesson 11----
