@@ -209,8 +209,19 @@
     document.querySelector('.класс или id или тег').ивент = function(){
         console.log('click');
     }
+// выбор через querySelector применяется только к первому встреченному элементу
 
-    //! удаление подсветки информации при двойном клике
+// событие нельзя присвоить коллекции элементов
+
+
+//* обработка через forEach()
+blocks.forEach(function(element){   // автоматически проходит по массиву
+    console.log(element);
+    element.onclick = function(){
+        console.log('work');
+    }
+})
+
 //todo -----lesson 9-----
 //todo -----lesson 10----
 //todo -----lesson 11----
