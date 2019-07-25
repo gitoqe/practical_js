@@ -8,20 +8,40 @@
 
 // Задача 1. Создайте input в который пользователь может вводить текст на латинице. Используя события клавиатуры перехватывайте введенный символ - если пользователь ввел маленькую (строчную) букву, выводите ее. Если большую (пропись) - удаляйте. Ограничте возможность введения только буквами.
 document.querySelector('#latin').onkeypress = function(k){
-    console.log(k);
-    console.log(k.charCode);
-    if
-    
-    
+    if (!(k.charCode >= 97 && k.charCode <= 122)){
+        return false;
+    }
 }
 
-
-
-
 // Задача 2. Создайте один блок внутри другого. На внутренний блок добавьте возможность сдвига блока вправо, влево, вверх, вниз с помощью клавиш стрелок. Бонус - добавьте на пробел возможность поворота фигуры вокруг оси на 45 градусов.
-
-
-
+let vnutr = document.querySelector('.vnutr');
+let horizon = 0;
+let vertical = 0;
+vnutr.style.left = horizon + 'px';
+vnutr.style.top = vertical + 'px';
+document.onkeydown = function(m){
+    if (m.keyCode == 37){console.log(m.keyCode);
+        horizon += 1;
+        vnutr.style.left = horizon + 'px';
+    }else if (m.keyCode == 38){console.log(m.keyCode);
+        vertical -= 1;
+        vnutr.style.top = vertical + 'px';
+    }else if (m.keyCode == 39){console.log(m.keyCode);
+        horizon += 1;
+        vnutr.style.left = horizon + 'px';
+    }else if (m.keyCode == 40){console.log(m.keyCode);
+        vertical += 1;
+        vnutr.style.top = vertical + 'px';
+    }else{
+        console.log(m.keyCode);
+    }
+}
+/*
+left = 37
+up = 38
+right = 39
+down = 40
+*/
 
 // Задача 3. Напишите программу которая при нажатии кнопки клавиатуры меняет символ на произвольный.
 

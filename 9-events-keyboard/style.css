@@ -2,3 +2,13 @@ h4{
     font-weight: normal;
     margin: 25px;
 }
+.vnesh{
+    width: 200px;
+    height: 200px;
+    background: rgb(229, 200, 233);
+}
+.vnutr{
+    width: 30px;
+    height: 30px;
+    background: lightskyblue;
+}
