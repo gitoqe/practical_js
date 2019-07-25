@@ -1,3 +1,11 @@
+//todo имена файлов:        - -> _
+//todo имена архивов:       js_les9.zip -> js_unit_9.zip
+//todo имена переменных:    sup_alpha -> supAlpha
+//todo константы:           CONSTANTA
+//todo функции:             анонимные > именованные
+//todo html:                условие задачи в html
+//todo 
+
 //! ассоциативный массив
 
 //todo -----lesson 1-----
@@ -119,7 +127,7 @@
     document.querySelector('img').src = 'qwe.jpg';
 
 }
-//todo -----lesson 6-----
+//todo -lesson 6- dom, получение данных
 {
 // получение данных через input
 
@@ -155,7 +163,7 @@
     document.querySelector('.класс[атрибут="значение"]').value; // значение атрибута value у опции - задается заранее
 
 }
-//todo -----lesson 7----- CYCLE, ARRAY
+//todo -lesson 7- for, array, циклы, массивы
 {
 // выбор по классу
 .querySelectorAll('')
@@ -180,7 +188,7 @@
     document.querySelectorAll('#idshnik option')
 
 }
-//todo -----lesson 8-----   EVENTS
+//todo -lesson 8- events mouse, события мыши.
 {
 //! https://developer.mozilla.org/ru/docs/Web/API/MouseEvent
 // перед событиями в свойствах элемента ставится приставка _on_
@@ -211,7 +219,7 @@
         console.log('click');
     }
 }
-//todo -----lesson 8 bonus
+//todo -lesson 8- бонус, табы, коллекции элементов, перебор forEach, this
 {
 //* querySelectorAll дает коллекцию элементов
     // выбор через querySelector применяется только к первому встреченному элементу
@@ -245,7 +253,7 @@ blocks.forEach(function(element){   // автоматически проходи
     }
 //* составной запрос с использованием CSS-синтаксиса
     // .класс[атрибут=значение]
-    .tab[color=red;];
+    ('.tab[color=red;]');
     //совмещение переменных и текста в запросе
     //! кавычки!
         document.querySelector('.tab-body[data="'+data+'"]').style.display = 'block';
@@ -254,7 +262,47 @@ blocks.forEach(function(element){   // автоматически проходи
 
 // атрибут data-...
     //* используется для выделения элемента среди себе подобных
-//todo -----lesson 9-----
+
+//todo -lesson 9- события клавиатуры
+// вся информация о событии хранится в его объекте
+//* нажатие клавиши при фокусе элемента
+    document.querySelector('#key?').onkeypress = function(){
+        // ...
+    }
+//* нажатие клавиши на странице
+    document.onkeypress = function(){
+        // ...
+    }
+//* передача информации о нажатии
+    document.querySelector('#key?').onkeypress = function(element){
+        console.log(element);
+            /*
+            информация вида:
+            element.charCode 97;
+            element.altKey false;
+            element.key: "a";
+            element.shiftKey: false;
+            */
+    }
+// контроль вводимых значений можно осуществить проверкой вводимых значений через код символа, например
+    if (a.keyCode < 48 || a.keyCode > 57){
+        //
+    }else{
+        this.value += a.key;
+    }
+//* блокировка ввода в input
+    document.querySelector('#key?').onkeypress = function(){
+        return false;
+    }
+
+//* отпуск
+document.querySelector('#key?').onkeyup = function(){
+    // ...
+}
+//* зажатие
+    document.querySelector('#key?').onkeydown = function(){
+        // ...
+    }
 //todo -----lesson 10----
 //todo -----lesson 11----
 
