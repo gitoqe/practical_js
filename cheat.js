@@ -305,7 +305,27 @@ document.querySelector('#key?').onkeyup = function(){
     }
 //* преобразовать число в символ с помощью
     String.fromCharCode()
-//todo -----lesson 10----
+
+//todo -lesson 10- работа с CSS
+//* вывод стилей объекта
+    console.log(block1.style);
+
+//* работа с классами css в JS проще, чем с свойствами css
+
+//* добавление класса стиля к объекту
+    block1.classList.add('red');
+
+//* удаление класса свойства
+    block1.classList.remove()
+//* вывод классов элемента - токен идентификатора
+    console.log(block1.classList);
+//* проверка наличия класса, ответ - true/false
+    console.log(block1.classList.contains('red'));
+//* перключение ON - OFF
+    block1.classList.toggle('red');
+
+
+
 //todo -----lesson 11----
 
 

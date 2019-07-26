@@ -17,3 +17,7 @@ for (let i = 0; i < task_number.length; i++) {
 .tab{
     cursor: pointer;
 }
+
+
+//* работа с модальным окном
+https://moonback.ru/page/modal-window-html-css-only
