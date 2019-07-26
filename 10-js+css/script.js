@@ -31,9 +31,6 @@ btnOff.onclick = function(){
     btnOff.classList.add('hide');
 }
 
-
-
-
 // нумерация заданий
 let task_number = document.querySelectorAll('h3');
 for (let i = 0; i < task_number.length; i++) {
