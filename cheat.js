@@ -303,6 +303,8 @@ document.querySelector('#key?').onkeyup = function(){
     document.querySelector('#key?').onkeydown = function(){
         // ...
     }
+//* преобразовать число в символ с помощью
+    String.fromCharCode()
 //todo -----lesson 10----
 //todo -----lesson 11----
 

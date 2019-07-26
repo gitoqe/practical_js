@@ -1,14 +1,18 @@
 h4{
     font-weight: normal;
-    margin: 25px;
+    margin-block: 25px;
 }
 .vnesh{
     width: 200px;
     height: 200px;
-    background: rgb(229, 200, 233);
+    background: rgb(246, 230, 248);
+    padding: 10px;
 }
 .vnutr{
     width: 30px;
     height: 30px;
     background: lightskyblue;
+}
+#sign{
+    font-size: 50px;
 }
