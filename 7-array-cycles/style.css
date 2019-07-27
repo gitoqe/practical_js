@@ -1,0 +1,16 @@
+#twelve{
+    text-align: center;
+}
+#rework{
+    margin: 25px;
+    font-size: 14pt;
+}
+#mistake{
+    padding: 15px;
+    font-style: italic;
+    background-color: rgba(144, 238, 144, 0.15);
+}
+h4{
+    font-weight: normal;
+    margin-block: 25px;
+}

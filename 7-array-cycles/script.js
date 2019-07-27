@@ -90,11 +90,15 @@ function zodiak(){
     let D = document.querySelector('#day').value;
     let M = document.querySelector('#month').value;
     let znak = document.querySelector('#znak');
-    for (let i = 0; i < calend.length; i++) {
-        if (((M == calend[i][1]) && (D >= calend[i][2])) || 
-            ((M == calend[i][3]) && (D <= calend[i][4]))){
-            znak.innerHTML = calend[i][0];
+    if ((D >= 1 && D <= 31) && (M >= 1 && M <= 12)){
+        for (let i = 0; i < calend.length; i++) {
+            if (((M == calend[i][1]) && (D >= calend[i][2])) || 
+                ((M == calend[i][3]) && (D <= calend[i][4]))){
+                znak.innerHTML = calend[i][0];
+            }
         }
+    }else{
+        znak.innerHTML = 'Данные некорректны';
     }
 }
 document.querySelector('#day').oninput = zodiak;
@@ -111,19 +115,16 @@ document.querySelector('#p-count').innerHTML = document.querySelectorAll('p').le
 
 
 //13. Создайте массив состояний из единицы и 5 нулей. Т.е. [1, 0,0,0,0,0]. Выведите массив на страницу. Добавьте кнопку. При каждом нажатии кнопки смещайте единицу вправо на одну позицию и заново выводите массив в тот же блок что и раньше. Если единица достигла конца массива - не делайте ничего.
+
+
 let five_array = [1, 0, 0, 0, 0, 0];
 document.querySelector('#five').innerHTML = five_array;
-//let five_counter = 0;
+let five_counter = 0;
 function fiveMove(){
-    //five_counter += 1;
-    if (five_array[5] != 1){ 
-        for (let i = 0; i < five_array.length; i++) {
-            if (five_array[i] == 1){
-                five_array[i] = 0;
-                five_array[i+1] = 1;
-                break;
-            }
-        }
+    if (five_counter < 5){
+        five_counter += 1;
+        five_array[five_counter-1] = 0;
+        five_array[five_counter] = 1;
     }
     document.querySelector('#five').innerHTML = five_array;
 }
@@ -219,7 +220,7 @@ for (let i = 0; i <= max_N; i++) {
     }
 }
 
-// нумерация заданий
+
 let task_number = document.querySelectorAll('h3');
 for (let i = 0; i < task_number.length; i++) {
     task_number[i].insertAdjacentHTML("beforeend", ' ' + (i + 1) + '.');

@@ -7,6 +7,7 @@
 //todo 
 
 //! ассоциативный массив
+//! align то устарел http://xbb.uz/dev/Pochemu-ne-stoit-ispolzovat-align-center
 
 //todo -----lesson 1-----
 {
